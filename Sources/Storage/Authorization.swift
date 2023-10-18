@@ -141,9 +141,9 @@ public extension UserInformationAccessible {
     }
 }
 
-public final class Authorization: NSObject {
+open class Authorization: NSObject {
     
-    static let `default`: Authorization = {
+    public static let `default`: Authorization = {
         var authorization = Authorization()
         
         var token: TokenResponseModel? {
@@ -169,7 +169,7 @@ public final class Authorization: NSObject {
     var accessTokenExpDate: Date?
     var refreshTokenExpDate: Date?
     
-    var wrapper: AuthorizedWrapper? {
+    public var wrapper: AuthorizedWrapper? {
         didSet {
             update(wrapper: wrapper)
         }
