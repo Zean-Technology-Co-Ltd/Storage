@@ -162,12 +162,12 @@ open class Authorization: NSObject {
         return authorization
     }()
     
-    var user: User?
-    var token: TokenResponseModel?
-    var oauthUser: OauthUser?
-    var accessToken: String?
-    var accessTokenExpDate: Date?
-    var refreshTokenExpDate: Date?
+    open var user: User?
+    open var token: TokenResponseModel?
+    open var oauthUser: OauthUser?
+    open var accessToken: String?
+    open var accessTokenExpDate: Date?
+    open var refreshTokenExpDate: Date?
     
     public var wrapper: AuthorizedWrapper? {
         didSet {
